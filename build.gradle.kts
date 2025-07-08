@@ -4,3 +4,25 @@
  * This is a general purpose Gradle build.
  * Learn more about Gradle by exploring our Samples at https://docs.gradle.org/8.14.1/samples
  */
+
+plugins {
+    id("io.spring.dependency-management") version "1.1.7"
+    id("org.springframework.boot") version "3.5.3"
+    java
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-web:3.5.3")
+    implementation("org.springframework.boot:spring-boot-starter-security:3.5.3")
+
+    //implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.5.3")
+
+    compileOnly("org.projectlombok:lombok:1.18.38")
+    annotationProcessor("org.projectlombok:lombok:1.18.38")
+
+    developmentOnly("org.springframework.boot:spring-boot-devtools:3.5.3")
+}
