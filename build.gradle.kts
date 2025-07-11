@@ -16,13 +16,20 @@ repositories {
 }
 
 dependencies {
+
+    // Spring boot dependencies
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
     implementation("org.springframework.boot:spring-boot-starter-web:3.5.3")
-    implementation("org.springframework.boot:spring-boot-starter-security:3.5.3")
+    implementation("org.springframework.boot:spring-boot-starter:3.5.3")
+    implementation("org.springframework.boot:spring-boot-autoconfigure:3.5.3")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.5.3")
+    implementation("org.springframework.boot:spring-boot-starter-jdbc:3.5.3")
 
-    //implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.5.3")
-
-    compileOnly("org.projectlombok:lombok:1.18.38")
+    // Lombok dependencies
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    implementation("org.projectlombok:lombok:1.18.38")
     annotationProcessor("org.projectlombok:lombok:1.18.38")
 
-    developmentOnly("org.springframework.boot:spring-boot-devtools:3.5.3")
+    // Extra dependencies
+
 }
