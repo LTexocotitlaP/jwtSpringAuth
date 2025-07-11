@@ -6,9 +6,9 @@
  */
 
 plugins {
-    id("io.spring.dependency-management") version "1.1.7"
-    id("org.springframework.boot") version "3.5.3"
     java
+    id("org.springframework.boot") version "3.5.3"
+    id("io.spring.dependency-management") version "1.1.7"
 }
 
 repositories {
@@ -16,20 +16,20 @@ repositories {
 }
 
 dependencies {
-
-    // Spring boot dependencies
-    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
-    implementation("org.springframework.boot:spring-boot-starter-web:3.5.3")
-    implementation("org.springframework.boot:spring-boot-starter:3.5.3")
-    implementation("org.springframework.boot:spring-boot-autoconfigure:3.5.3")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.5.3")
-    implementation("org.springframework.boot:spring-boot-starter-jdbc:3.5.3")
-
-    // Lombok dependencies
     // https://mvnrepository.com/artifact/org.projectlombok/lombok
     implementation("org.projectlombok:lombok:1.18.38")
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
     annotationProcessor("org.projectlombok:lombok:1.18.38")
 
-    // Extra dependencies
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    implementation("org.springframework.boot:spring-boot-starter-web:3.5.3")
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter
+    implementation("org.springframework.boot:spring-boot-starter:3.5.3")
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.5.3")
 
+    // https://mvnrepository.com/artifact/jakarta.persistence/jakarta.persistence-api
+    implementation("jakarta.persistence:jakarta.persistence-api:3.2.0")
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+implementation("org.postgresql:postgresql:42.7.7")
 }

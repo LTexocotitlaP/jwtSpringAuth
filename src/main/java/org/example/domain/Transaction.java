@@ -1,23 +1,31 @@
-package org.example.model;
+package org.example.domain;
 
-import lombok.Data;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Id;
 
-import javax.persistence.*;
-import java.time.LocalDateTime;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
 @Entity
-@Table(name = "transacciones_organismo")
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class Transaction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idTransaccion;
+    private Long id;
 
-    private Short provider;
-    private Short tipoTarjeta;
+    private Integer provider;
+    private Integer tipoTarjeta;
     private String numeroSerieHex;
-    private LocalDateTime fechaHoraTransaccion;
+    private String fechaHoraTransaccion;
     private String linea;
     private String estacion;
     private String autobus;
@@ -29,9 +37,9 @@ public class Transaction {
     private Integer saldoAntesTransaccion;
     private Integer montoTransaccion;
     private Integer saldoDespuesTransaccion;
-    private Short perfil1;
-    private Short perfil2;
-    private Short perfil3;
+    private Integer perfil1;
+    private Integer perfil2;
+    private Integer perfil3;
     private String samSerialHexUltimaRecarga;
     private String samSerialHex;
     private Integer contadorRecargas;
@@ -41,7 +49,7 @@ public class Transaction {
     private String purchaseLog;
     private String mac;
     private String counterValue;
-    private String counterAmount;
+    private String counterAmount; 
     private String samCounter;
     private String environment;
     private String environmentIssuerId;
@@ -49,8 +57,8 @@ public class Transaction {
     private String contractTariff;
     private String contractSaleSam;
     private String contractRestrictTime;
-    private LocalDateTime contractValidityStartDate;
-    private Short contractValidityDuration;
+    private String contractValidityStartDate;
+    private String contractValidityDuration;
     private String latitud;
     private String longitud;
 }
